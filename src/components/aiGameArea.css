@@ -1,0 +1,36 @@
+.ai-res-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    flex-direction: row;
+    padding: auto;
+    gap: 20px;
+    width: 100%;
+}
+
+.ai {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+}
+
+.ai-head {
+    align-self: center;
+}
+
+.ai-guess {
+    width: max-content;
+}
+
+.ai-hh {
+    width: 100%;
+}
+
+.ai-form1 {
+    width: 30px;
+}
+
+.ai-form2 {
+    width: 30px;
+}

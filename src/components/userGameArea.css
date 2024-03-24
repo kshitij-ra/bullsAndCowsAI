@@ -1,0 +1,32 @@
+.user-res-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    flex-direction: row;
+    padding: auto;
+    gap: 20px;
+    width: 100%;
+}
+
+.user {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+}
+
+.user-head {
+    align-self: center;
+}
+
+.user-guess {
+    width: max-content;
+}
+
+.user-hh {
+    width: 100%;
+}
+
+.user.form1 {
+    width: 30px;
+}

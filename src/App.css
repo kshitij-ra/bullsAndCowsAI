@@ -1,0 +1,36 @@
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  max-height: 100vh;
+
+}
+
+.mainDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 50px;
+}
+
+.gameArea {
+  display: flex;
+  /* width: 80%; */
+  height: 80%;
+  gap: 40px;
+}
+
+.gameArea>div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.separator {
+  border-right: 1px solid #ccc;
+  height: 45vh;
+}

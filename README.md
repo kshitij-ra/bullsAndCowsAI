@@ -45,7 +45,7 @@ To run the game locally, follow these steps:
    npm start
    ```
 
-5. Open your browser and go to `http://localhost:3000` to play the game.
+5. Open your browser and go to `http://localhost:5173` to play the game.
 
 ## Technologies Used
 

@@ -130,11 +130,11 @@ const AiGameArea = ({ turn, setTurn, setWinner, setWinningNumber, setHasError })
                 </div>
                 <div className='ai-guess'>
                     <h3 className='ai-hh'>Enter Cows:</h3>
-                    <input type='text' value={cowsInput} onChange={(e) => setCowsInput(e.target.value)} />
+                    <input type='text' autoComplete="off" value={cowsInput} onChange={(e) => setCowsInput(e.target.value)} />
                 </div>
                 <div className='ai-guess'>
                     <h3 className='ai-hh'>Enter Bulls:</h3>
-                    <input type='text' value={bullsInput} onChange={(e) => setBullsInput(e.target.value)} />
+                    <input type='text' autoComplete="off" value={bullsInput} onChange={(e) => setBullsInput(e.target.value)} />
                 </div>
             </div>
             <button onClick={handleGuessSubmit}>Submit</button>

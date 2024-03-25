@@ -109,7 +109,7 @@ const UserGameArea = ({ turn, setTurn, setWinner, setWinningNumber }) => {
             <div className='user-res-row'>
                 <div className='user-guess'>
                     <h3 className='user-hh'>Enter Guess:</h3>
-                    <input type='text' id='guessInput' value={input} onChange={(e) => setInput(e.target.value)} />
+                    <input type='text' id='guessInput' autoComplete="off" value={input} onChange={(e) => setInput(e.target.value)} />
                 </div>
             </div>
             <button onClick={handleGuessSubmit}>Submit</button>

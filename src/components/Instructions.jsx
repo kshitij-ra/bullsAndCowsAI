@@ -12,10 +12,10 @@ const Instructions = ({ setStart }) => {
             <ol>
                 <li>The game consists of two players: you and the AI.</li>
                 <li>You will start by entering a four-digit number where each digit is unique (no repeating digits).</li>
-                <li>The AI will then respond with the number of "bulls" and "cows" for your guess:
+                <li>The AI will then respond with the number of &quot;bulls&quot; and &quot;cows&quot; for your guess:
                     <ul>
-                        <li>A "bull" indicates that a digit in your guess is in the correct position.</li>
-                        <li>A "cow" indicates that a digit in your guess is present in the secret number but not in the correct position.</li>
+                        <li>A &quot;bull&quot; indicates that a digit in your guess is in the correct position.</li>
+                        <li>A &quot;cow&quot; indicates that a digit in your guess is present in the secret number but not in the correct position.</li>
                     </ul>
                 </li>
                 <li>Based on the feedback, you will make subsequent guesses until you correctly guess the secret number.</li>
@@ -32,7 +32,7 @@ const Instructions = ({ setStart }) => {
             </ul>
 
             <h2>Winning:</h2>
-            <p>You win the game by correctly guessing the AI's secret number before the AI guesses your secret number.</p>
+            <p>You win the game by correctly guessing the AI&apos;s secret number before the AI guesses your secret number.</p>
             <p>If AI guesses your number first, then the AI wins.</p>
 
             <p>Good luck and happy guessing!</p>

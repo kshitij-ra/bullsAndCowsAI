@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './aiGameArea.css';
 
-const AiGameArea = ({ turn, setTurn }) => {
+const AiGameArea = ({ turn, setTurn, setWinner, setWinningNumber, setHasError }) => {
     const [lastNumber, setLastNumber] = useState('-');
     const [lastBulls, setLastBulls] = useState('-');
     const [lastCows, setLastCows] = useState('-');
@@ -15,7 +15,7 @@ const AiGameArea = ({ turn, setTurn }) => {
     }, []);
 
     useEffect(() => {
-        if (aiGuess === 0 && turn === 'ai' && possibleChoices.length > 0) {
+        if (aiGuess === 0 && turn === 'AI' && possibleChoices.length > 0) {
             const guess = guessFromChoices();
             setAiGuess(guess);
             console.log("ai guess" + guess);
@@ -42,7 +42,7 @@ const AiGameArea = ({ turn, setTurn }) => {
     };
 
     const handleTurnChange = () => {
-        setTurn(prevTurn => (prevTurn === 'ai' ? 'user' : 'ai'));
+        setTurn(prevTurn => (prevTurn === 'AI' ? 'User' : 'AI'));
     };
 
     const guessFromChoices = () => {
@@ -67,16 +67,19 @@ const AiGameArea = ({ turn, setTurn }) => {
             return;
         }
         if (bulls === 4) {
-            alert('AI Wins! Your number: ' + aiGuess);
+            setWinningNumber(aiGuess);
+            setWinner('AI');
             return;
         }
         filterChoices(aiGuess, cows, bulls);
         if (possibleChoices.length === 0) {
-            alert('You made a mistake in entering cows and bulls. Please restart game.');
+            setHasError(true);
+            // alert('You made a mistake in entering cows and bulls. Please restart game.');
             return;
         }
         if (possibleChoices.length === 1) {
-            alert('AI Wins! Your number: ' + possibleChoices[0]);
+            setWinningNumber(aiGuess);
+            setWinner('AI');
             return;
         }
         setLastNumber(aiGuess);
@@ -104,7 +107,7 @@ const AiGameArea = ({ turn, setTurn }) => {
     }
 
     return (
-        <div className='ai' style={turn !== 'ai' ? { pointerEvents: "none", opacity: "0.4" } : {}}>
+        <div className='ai' style={turn !== 'AI' ? { pointerEvents: "none", opacity: "0.4" } : {}}>
             <h2 className='ai-head'>AI&apos;s turn</h2>
             <div className='ai-res-row1'>
                 <div className='ai-guess'>
@@ -123,7 +126,7 @@ const AiGameArea = ({ turn, setTurn }) => {
             <div className='ai-res-row'>
                 <div className='ai-guess'>
                     <h3 className='ai-hh'>AI&apos;s Guess:</h3>
-                    {turn === 'ai' && <span><b>{aiGuess}</b></span>}
+                    {turn === 'AI' && <span><b>{aiGuess}</b></span>}
                 </div>
                 <div className='ai-guess'>
                     <h3 className='ai-hh'>Enter Cows:</h3>

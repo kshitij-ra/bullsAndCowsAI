@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './userGameArea.css';
-const UserGameArea = ({ turn, setTurn }) => {
+const UserGameArea = ({ turn, setTurn, setWinner, setWinningNumber }) => {
     const [guesses, setGuesses] = useState([]);
     const [lastNumber, setLastNumber] = useState('-');
     const [lastBulls, setLastBulls] = useState('-');
@@ -9,7 +9,7 @@ const UserGameArea = ({ turn, setTurn }) => {
     const [input, setInput] = useState('');
 
     useEffect(() => {
-        if (targetNumber == 0 && turn === 'user') {
+        if (targetNumber == 0 && turn === 'User') {
             const randomNumber = generateRandomNumber();
             setTargetNumber(randomNumber);
             console.log(randomNumber);
@@ -26,7 +26,7 @@ const UserGameArea = ({ turn, setTurn }) => {
     }
 
     const handleTurnChange = () => {
-        setTurn(prevTurn => (prevTurn === 'ai' ? 'user' : 'ai'));
+        setTurn(prevTurn => (prevTurn === 'AI' ? 'User' : 'AI'));
     };
 
     const hasDistinctDigits = (number) => {
@@ -76,7 +76,9 @@ const UserGameArea = ({ turn, setTurn }) => {
             return;
         }
         if (guessInput === targetNumber) {
-            alert('Congratulations! You guessed the number!');
+            setWinningNumber(targetNumber);
+            setWinner('User');
+            // alert('Congratulations! You guessed the number!');
             return;
         }
         setGuesses([...guesses, guessInput]);
@@ -87,7 +89,7 @@ const UserGameArea = ({ turn, setTurn }) => {
     };
 
     return (
-        <div className='user' style={turn != 'user' ? { pointerEvents: "none", opacity: "0.4" } : {}}>
+        <div className='user' style={turn != 'User' ? { pointerEvents: "none", opacity: "0.4" } : {}}>
             <h2 className='user-head'>Your turn</h2>
             <div className='user-res-row'>
                 <div className='user-guess'>

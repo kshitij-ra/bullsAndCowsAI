@@ -126,7 +126,7 @@ const AiGameArea = ({ turn, setTurn, setWinner, setWinningNumber, setHasError })
             <div className='ai-res-row'>
                 <div className='ai-guess'>
                     <h3 className='ai-hh'>AI&apos;s Guess:</h3>
-                    {turn === 'AI' && <span><b>{aiGuess}</b></span>}
+                    {turn === 'AI' && <span className='ai-guess-text'><b>{aiGuess}</b></span>}
                 </div>
                 <div className='ai-guess'>
                     <h3 className='ai-hh'>Enter Cows:</h3>

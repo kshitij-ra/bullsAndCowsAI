@@ -106,7 +106,7 @@ const AiGameArea = ({ turn, setTurn }) => {
     return (
         <div className='ai' style={turn !== 'ai' ? { pointerEvents: "none", opacity: "0.4" } : {}}>
             <h2 className='ai-head'>AI&apos;s turn</h2>
-            <div className='ai-res-row'>
+            <div className='ai-res-row1'>
                 <div className='ai-guess'>
                     <h3 className='ai-hh'>Last Guess:</h3>
                     <h3>{lastNumber}</h3>

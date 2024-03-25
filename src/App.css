@@ -1,5 +1,4 @@
 #root {
-  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -9,19 +8,21 @@
 
 .mainDiv {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px solid #EEEEEE;
   border-radius: 20px;
   background-color: #31363F;
   padding: 50px;
+  flex-wrap: wrap;
 }
 
 .gameArea {
   display: flex;
-  /* width: 80%; */
   height: 80%;
   gap: 40px;
+  flex-wrap: wrap;
 }
 
 .gameArea>div {
@@ -32,6 +33,30 @@
 }
 
 .separator {
-  border-right: 1px solid #EEEEEE;
+  border: 1px solid #EEEEEE;
   height: 45vh;
+}
+
+.instructions {
+  color: #EEEEEE;
+  text-align: justify;
+}
+
+@media screen and (max-width: 945px) {
+
+  .separator {
+    min-width: 45vw;
+    margin-top: 10px;
+  }
+
+  .gameArea {
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mainDiv {
+    padding: 20px;
+  }
+
 }

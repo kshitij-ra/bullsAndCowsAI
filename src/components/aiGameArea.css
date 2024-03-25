@@ -1,4 +1,4 @@
-.ai-res-row {
+.ai-res-row1 {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 10px;
@@ -6,6 +6,17 @@
     padding: auto;
     gap: 20px;
     width: 100%;
+}
+
+.ai-res-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    flex-direction: row;
+    padding: auto;
+    gap: 20px;
+    /* width: max-content;
+    flex-wrap: wrap; */
 }
 
 .ai {
@@ -33,4 +44,12 @@
 
 .ai-form2 {
     width: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    .ai-res-row {
+        flex-direction: column;
+        align-items: center;
+        /* flex-wrap: wrap; */
+    }
 }

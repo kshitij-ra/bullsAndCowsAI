@@ -24,13 +24,13 @@ To run the game locally, follow these steps:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/kshitij-ra/bulls-and-cows.git
+   git clone https://github.com/kshitij-ra/bullsAndCowsAI.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd bulls-and-cows
+   cd bullsAndCowsAI
    ```
 
 3. Install dependencies:

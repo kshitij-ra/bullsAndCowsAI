@@ -38,18 +38,11 @@
     width: 100%;
 }
 
-.ai-form1 {
-    width: 30px;
-}
 
-.ai-form2 {
-    width: 30px;
-}
 
 @media screen and (max-width: 600px) {
     .ai-res-row {
         flex-direction: column;
         align-items: center;
-        /* flex-wrap: wrap; */
     }
 }

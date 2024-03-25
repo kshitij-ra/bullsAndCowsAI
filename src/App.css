@@ -11,8 +11,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #ccc;
+  border: 1px solid #EEEEEE;
   border-radius: 20px;
+  background-color: #31363F;
   padding: 50px;
 }
 
@@ -31,6 +32,6 @@
 }
 
 .separator {
-  border-right: 1px solid #ccc;
+  border-right: 1px solid #EEEEEE;
   height: 45vh;
 }

@@ -6,6 +6,7 @@ import './App.css';
 import Instructions from './components/Instructions.jsx';
 import WinScreen from './components/WinScreen.jsx';
 import ErrorScreen from './components/ErrorScreen.jsx';
+import ConfettiExplosion from 'react-confetti-explosion';
 
 function App() {
   const [turn, setTurn] = useState('User');
@@ -13,6 +14,15 @@ function App() {
   const [winner, setWinner] = useState('none');
   const [winningNumber, setWinningNumber] = useState(0);
   const [hasError, setHasError] = useState(false);
+  const [isExploding, setIsExploding] = useState(false);
+
+  const largeProps = {
+    force: 0.8,
+    duration: 3000,
+    particleCount: 300,
+    width: 1600,
+    colors: ['#041E43', '#1471BF', '#5BB4DC', '#FC027B', '#66D805'],
+  };
 
   return (
     <>
@@ -21,7 +31,10 @@ function App() {
         {start === 0 ? (
           <Instructions setStart={setStart} />
         ) : winner !== 'none' ? (
-          <WinScreen winner={winner} number={winningNumber} />
+          <>
+            <ConfettiExplosion {...largeProps} />
+            <WinScreen winner={winner} number={winningNumber} />
+          </>
         ) : hasError ? (
           <ErrorScreen />
         ) : (
